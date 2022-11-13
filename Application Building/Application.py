@@ -7,13 +7,13 @@ from flask import Flask,request, render_template
 app=Flask(__name__,template_folder="templates")
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('home.html')
+    return render_template('index.html')
 @app.route('/home', methods=['GET'])
 def about():
-    return render_template('home.html')
+    return render_template('index.html')
 @app.route('/pred',methods=['GET'])
 def page():
-    return render_template('upload.html')
+    return render_template('predict.html')
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
     print("[INFO] loading model...")
